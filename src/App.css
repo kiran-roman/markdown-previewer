@@ -1,0 +1,150 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color:#9381ff;
+  height: 100vh;
+}
+.App{
+display: grid;
+grid-auto-flow: row;
+justify-content: center;
+}
+#editor-container{
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#topbar,#p-topbar{
+  position: relative;
+  margin-top: 20px;
+  background-color: #5b3eff;
+  width: auto;
+  height: 30px;
+  color:antiquewhite;
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+}
+#editor{
+  margin: 0;
+  justify-content: center;
+  background-color: #c3b8ff;
+  border: 2px solid black;
+  width: 47vw;
+  height: 15vw;
+  font-size: 15px;
+}
+textarea:focus{
+  outline: none;
+  border: none;
+}
+.icon{
+  width: 15px;
+cursor:pointer;
+}
+#preview-container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+}
+#preview{
+  padding: 20px 10px;
+  width: 60vw;
+  height: auto;
+  min-height: 100px;
+  background-color: #c3b8ff;
+  border: 2px solid black;
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+#preview img {
+  max-width: 100%; 
+  height: auto;
+}
+#preview h1{
+  border-bottom: 3px solid;
+}
+#preview h1{
+  border-bottom: 3px solid;
+}
+#preview h2{
+  border-bottom: 1px solid;
+}
+#preview pre code{
+  min-width: 100%;
+  display: block;
+  background: rgb(143, 171, 194);
+}
+#preview  code{
+  display: inline-block;
+  background: rgb(143, 171, 194);
+}
+#preview table,th,td,tr  {
+  border: 2px solid #9381ff;
+  border-collapse: collapse;
+}
+blockquote{
+  color: #9381ff;
+  border-left: 3px solid #9381ff;
+  padding-left: 3px;
+}
+.expanded {
+  width: 70vw;
+  height: auto;
+  column-span: all;
+}
+.expanded #editor{
+  width: 70vw;
+  min-height: 90vh;
+}
+.expanded #preview, .expanded #p-topbar{
+  display: none;
+}
+.preview-expanded #editor,.preview-expanded #topbar{
+  display: none;
+}
+.preview-expanded,.preview-expanded #preview{
+  width: 70vw;
+}
+@media only screen and (max-width: 600px){
+  #editor{
+    font-size: 10px;
+    height: 20vh;
+    width: 60vw;
+  }
+  .expanded ,.expanded #editor{
+    width: 90vw;
+   height: auto;
+  }
+  #preview{
+    font-size: 15px;
+    width: 85vw;
+  }
+  .preview-expanded,.preview-expanded #preview{
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 600px)and (max-width: 800px){
+  #editor{
+    font-size: 14px;
+    height: 20vh;
+    width: 60vw;
+  }
+  .expanded ,.expanded #editor{
+    width: 90vw;
+   height: auto;
+  }
+  #preview{
+    font-size: 20px;
+    width: 85vw;
+  }
+  .preview-expanded,.preview-expanded #preview{
+    width: 90vw;
+  }
+}
